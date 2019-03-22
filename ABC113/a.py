@@ -8,10 +8,5 @@ abcde	s = list(input())	s = ['a', 'b', 'c', 'd', 'e']
 1 2 3 4 5 ... n 　	li = list(map(int, input().split()))	li = [1, 2, 3, 4, 5, ..., n]
 FFFTFTTFF 　	li = input().split('T')	li = ['FFF', 'F', '', 'FF']
 """
-n = int(input())
-if n == 1:
-    print("Hello World")
-else:
-    a = int(input())
-    b = int(input())
-    print(a+b)
+x, y = map(int, input().split())
+print(int(x + y/2))
