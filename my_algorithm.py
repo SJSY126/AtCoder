@@ -32,3 +32,22 @@ class UnionFind():
         while self.parent[x] >= 0:
             x = self.find(self.parent[x])
         return abs(self.parent[x])
+
+
+class MemoFibo():
+    def memo_fibo(n):
+        memo = [0] * (n+1)
+
+        def _fibo(n):
+            if n == 1:
+                return 0
+            elif n == 2:
+                memo[2] = 1
+                return 1
+            else:
+                if memo[n] != 0:
+                    return memo[n]
+                memo[n] = (_fibo(n-1) + _fibo(n-2))
+                return memo[n]
+
+        return _fibo(n)
