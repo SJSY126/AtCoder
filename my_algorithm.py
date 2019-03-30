@@ -35,6 +35,7 @@ class UnionFind():
 
 
 class MemoFibo():
+    # メモ化再帰
     def memo_fibo(n):
         memo = [0] * (n+1)
 
@@ -51,3 +52,13 @@ class MemoFibo():
                 return memo[n]
 
         return _fibo(n)
+
+
+class SumOfDigits():
+    # 各桁の和を計算
+    def sum_digits(n):
+        sum = 0
+        while n > 0:
+            sum += n % 10
+            n = n // 10
+        return sum
